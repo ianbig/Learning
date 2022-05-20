@@ -1,0 +1,31 @@
+// example for built-in join
+const schools = ["Yorktown", "Washington & Liberty", "Wakefield"];
+console.log(schools.join('. '))
+
+// example for built-in filter
+const animals = ['mammals', 'dog', 'cat', 'human', 'people'];
+const toCut = ['human', 'people'];
+const notHuman = (speice) => speice !== 'human' && speice !== 'people';
+const realAnimal = animals.filter(animal => notHuman(animal));
+console.log(realAnimal);
+
+
+// example for built-in map
+const teams = ['lakers', 'heat', 'celtics', 'duke'];
+const toObj = (item) => {
+    return {
+        "Team Name": item
+    };
+}
+const transferToObj = (teams) => teams.map((team) => toObj(team));
+console.log(transferToObj(teams));
+console.log(Object.keys(transferToObj(teams)));
+
+// example for Object.keys (create an array of keys for object)
+const myobj = {
+  Yorktown: 10,
+  "Washington & Liberty": 2,
+  Wakefield: 5
+};
+
+console.log(Object.keys(myobj));

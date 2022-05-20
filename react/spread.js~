@@ -1,0 +1,4 @@
+const peaks = ['pickle', 'burger'];
+const animal = ['lion', 'dog'];
+const combine = [...peaks, ...animal];
+console.log(combine);
